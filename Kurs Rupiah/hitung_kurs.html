@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Kurs Mata Uang</title>
+    <style>
+        fieldset{
+            width: 34%;
+            background: rgb(232, 253, 253);
+        }
+        .warna{
+            background: white;
+        }
+        .rp{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset><legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table border="1" style="text-align: center;">
+            <tr>
+                <td><b>Masukan Nilai</b></td>
+                <td><b>Valas</b></td>
+                <td class="rp"><b>Nilai Rupiah</b></td>
+            </tr>
+            <tr class="warna">
+                <td><input type="number" id="nilai" onchange="hitung()"></td>
+                <td><select id="kurs" onchange="hitung()">
+                    <option value="dollarUS">Dollar US</option>
+                    <option value="dollarSingapore">Dollar Singapore</option>
+                    <option value="ringgitMalaysia">Ringgit Malaysia</option>
+                    <option value="yenJepang">Yen Jepang</option>
+                    <option value="euro">Euro</option>
+                    <option value="riyalArabSaudi">Riyal Arab Saudi</option>
+                    </select></td>
+                <td id="hasil"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+        const input = document.getElementById("nilai");
+        const pilihKurs = document.getElementById("kurs");
+        const hasil = document.getElementById("hasil");
+        const kursMataUang = {
+            "dollarUS" : 9915,
+            "dollarSingapore" : 13472,
+            "ringgitMalaysia" : 874,
+            "yenJepang" : 120,
+            "euro" : 15888,
+            "riyalArabSaudi" : 3592,
+        }
+        function hitung() {
+            if (pilihKurs.value == "dollarUS"){
+                const total = input.value * kursMataUang.dollarUS;
+                hasil.innerHTML = total;
+            }
+            else if (pilihKurs.value == "dollarSingapore"){
+                const total = input.value * kursMataUang.dollarSingapore;
+                hasil.innerHTML = total;
+            }
+            else if (pilihKurs.value == "ringgitMalaysia"){
+                const total = input.value * kursMataUang.ringgitMalaysia;
+                hasil.innerHTML = total;
+            }
+            else if (pilihKurs.value == "yenJepang"){
+                const total = input.value * kursMataUang.yenJepang;
+                hasil.innerHTML = total;
+            }
+            else if (pilihKurs.value == "euro"){
+                const total = input.value * kursMataUang.euro;
+                hasil.innerHTML =  total;
+            }
+            else if (pilihKurs.value == "riyalArabSaudi"){
+                const total = input.value * kursMataUang.riyalArabSaudi;
+                hasil.innerHTML = total;
+            }
+        }
+    </script>
+</body>
+</html>
