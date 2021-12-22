@@ -26,7 +26,7 @@
             <tr class="warna">
                 <td><input type="number" id="nilai" onchange="hitung()"></td>
                 <td><select id="kurs" onchange="hitung()">
-                    <option value="dollarUS">Dollar US</option>
+                    <option value="dollarUs">Dollar US</option>
                     <option value="dollarSingapore">Dollar Singapore</option>
                     <option value="ringgitMalaysia">Ringgit Malaysia</option>
                     <option value="yenJepang">Yen Jepang</option>
@@ -42,7 +42,7 @@
         const pilihKurs = document.getElementById("kurs");
         const hasil = document.getElementById("hasil");
         const kursMataUang = {
-            "dollarUS" : 9915,
+            "dollarUs" : 9915,
             "dollarSingapore" : 13472,
             "ringgitMalaysia" : 874,
             "yenJepang" : 120,
@@ -50,8 +50,8 @@
             "riyalArabSaudi" : 3592,
         }
         function hitung() {
-            if (pilihKurs.value == "dollarUS"){
-                const total = input.value * kursMataUang.dollarUS;
+            if (pilihKurs.value == "dollarUs"){
+                const total = input.value * kursMataUang.dollarUs;
                 hasil.innerHTML = total;
             }
             else if (pilihKurs.value == "dollarSingapore"){
