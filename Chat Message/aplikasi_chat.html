@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Aplikasi Chat</title>
+    <style>
+        #kotakChat{
+            border: 1px solid;
+            width: 600px;
+            height: 300px;
+            overflow: auto;
+        }
+        #isiPesan{
+            width: 533px;
+        }
+    </style>
+</head>
+<body>
+    <div id="kotakChat">
+        Hello
+        <br>
+        Apa Kabar?
+        <br>
+        Baik ya?
+        <br>
+        Iya nih
+    </div>
+    <div>
+        <table border="1">
+            <tr>
+                <td><input type="text" id="isiPesan" value="Iya nih"></td>
+                <td><button id="kirim" onclick="kirimPesan()">Kirim</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function kirimPesan() {
+            let kotak = document.getElementById("kotakChat");
+            let pesan = document.getElementById("isiPesan");
+            let kirim = document.getElementById("kirim");
+            kotak.innerHTML = kotak.innerHTML + "<br>" + pesan.value;
+            pesan.value = "";
+        }
+    </script>
+</body>
+</html>
