@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Image Picker</title>
+    <style>
+        #gambar {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <select name="image" id="image" onchange="ganti()">
+        <option value="badak">Badak</option>
+        <option value="jerapah">Jerapah</option>
+        <option value="panda">Panda</option>
+        <option value="koala">Koala</option>
+        <option value="singa">Singa</option>
+        <option value="harimau">Harimau</option>
+        <option value="kucing">Kucing</option>
+    </select>
+    <div>
+        <br>
+        <img src="image/badak.jpg" id="gambar">
+    </div>
+    <script>
+        function ganti() {
+            let ubah = document.getElementById("image");
+            if (ubah.value == "badak") {
+                document.getElementById("gambar").src = "image/badak.jpg";
+                window.alert("Ini gambar Badak");
+            }
+            else if (ubah.value == "jerapah") {
+                document.getElementById("gambar").src = "image/jerapah.jpg";
+                window.alert("Ini gambar Jerapah");
+            }
+            else if (ubah.value == "panda") {
+                document.getElementById("gambar").src = "image/panda.jpg";
+                window.alert("Ini gambar Panda");
+            }
+            else if (ubah.value == "koala") {
+                document.getElementById("gambar").src = "image/koala.jpeg";
+                window.alert("Ini gambar Koala");
+            }
+            else if (ubah.value == "singa") {
+                document.getElementById("gambar").src = "image/singa.jpg";
+                window.alert("Ini gambar Singa");
+            }
+            else if (ubah.value == "harimau") {
+                document.getElementById("gambar").src = "image/harimau.jpg";
+                window.alert("Ini gambar Harimau");
+            }
+            else if (ubah.value == "kucing") {
+                document.getElementById("gambar").src = "image/kucing.jpg";
+                window.alert("Ini gambar Kucing");
+            }
+        }
+    </script>
+</body>
+</html>
