@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Kurs Mata Uang</title>
+    <title>Kurs Rupiah</title>
     <style>
-        fieldset{
+        fieldset {
             width: 34%;
             background: rgb(232, 253, 253);
         }
-        .warna{
+
+        .warna {
             background: white;
         }
-        .rp{
+
+        .rp {
             width: 200px;
         }
     </style>
 </head>
 <body>
-    <fieldset><legend>Kurs Rupiah - Mata Uang Asing</legend>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
         <table border="1" style="text-align: center;">
             <tr>
                 <td><b>Masukan Nilai</b></td>
@@ -26,52 +29,52 @@
             <tr class="warna">
                 <td><input type="number" id="nilai" onchange="hitung()"></td>
                 <td><select id="kurs" onchange="hitung()">
-                    <option value="dollarUs">Dollar US</option>
-                    <option value="dollarSingapore">Dollar Singapore</option>
-                    <option value="ringgitMalaysia">Ringgit Malaysia</option>
-                    <option value="yenJepang">Yen Jepang</option>
-                    <option value="euro">Euro</option>
-                    <option value="riyalArabSaudi">Riyal Arab Saudi</option>
+                        <option value="dollarUs">Dollar US</option>
+                        <option value="dollarSingapore">Dollar Singapore</option>
+                        <option value="ringgitMalaysia">Ringgit Malaysia</option>
+                        <option value="yenJepang">Yen Jepang</option>
+                        <option value="euro">Euro</option>
+                        <option value="riyalArabSaudi">Riyal Arab Saudi</option>
                     </select></td>
                 <td id="hasil"></td>
             </tr>
         </table>
     </fieldset>
     <script>
-        const input = document.getElementById("nilai");
-        const pilihKurs = document.getElementById("kurs");
-        const hasil = document.getElementById("hasil");
-        const kursMataUang = {
-            "dollarUs" : 9915,
-            "dollarSingapore" : 13472,
-            "ringgitMalaysia" : 874,
-            "yenJepang" : 120,
-            "euro" : 15888,
-            "riyalArabSaudi" : 3592,
-        }
         function hitung() {
-            if (pilihKurs.value == "dollarUs"){
-                const total = input.value * kursMataUang.dollarUs;
+            let input = document.getElementById("nilai");
+            let pilihKurs = document.getElementById("kurs");
+            let hasil = document.getElementById("hasil");
+            const nilaiKurs = {
+                "dollarUs": 9915,
+                "dollarSingapore": 13472,
+                "ringgitMalaysia": 874,
+                "yenJepang": 120,
+                "euro": 15888,
+                "riyalArabSaudi": 3592,
+            }
+            if (pilihKurs.value == "dollarUs") {
+                let total = input.value * nilaiKurs.dollarUs;
                 hasil.innerHTML = total;
             }
-            else if (pilihKurs.value == "dollarSingapore"){
-                const total = input.value * kursMataUang.dollarSingapore;
+            else if (pilihKurs.value == "dollarSingapore") {
+                let total = input.value * nilaiKurs.dollarSingapore;
                 hasil.innerHTML = total;
             }
-            else if (pilihKurs.value == "ringgitMalaysia"){
-                const total = input.value * kursMataUang.ringgitMalaysia;
+            else if (pilihKurs.value == "ringgitMalaysia") {
+                let total = input.value * nilaiKurs.ringgitMalaysia;
                 hasil.innerHTML = total;
             }
-            else if (pilihKurs.value == "yenJepang"){
-                const total = input.value * kursMataUang.yenJepang;
+            else if (pilihKurs.value == "yenJepang") {
+                let total = input.value * nilaiKurs.yenJepang;
                 hasil.innerHTML = total;
             }
-            else if (pilihKurs.value == "euro"){
-                const total = input.value * kursMataUang.euro;
+            else if (pilihKurs.value == "euro") {
+                let total = input.value * nilaiKurs.euro;
                 hasil.innerHTML = total;
             }
-            else if (pilihKurs.value == "riyalArabSaudi"){
-                const total = input.value * kursMataUang.riyalArabSaudi;
+            else if (pilihKurs.value == "riyalArabSaudi") {
+                let total = input.value * nilaiKurs.riyalArabSaudi;
                 hasil.innerHTML = total;
             }
         }
